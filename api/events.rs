@@ -21,7 +21,7 @@ async fn main() -> Result<(), Error> {
 async fn handler(_req: Request) -> Result<Response<Body>, Error> {
 
     // Handle OPTIONS preflight request
-    if req.method() == "OPTIONS" {
+    if _req.method() == "OPTIONS" {
         return Ok(Response::builder()
             .status(204)
             .header("Access-Control-Allow-Origin", "*") // or restrict to your frontend origin
