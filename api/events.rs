@@ -35,7 +35,7 @@ async fn handler(_req: Request) -> Result<Response<Body>, Error> {
         Event {
             title: "Welcome Week Campus Tour".to_string(),
             category: "Social".to_string(),
-            date: "September 5, 2024".to_string(),
+            date: "September 5, 2025".to_string(),
             time: "2:00 PM - 4:00 PM".to_string(),
             location: "Meet at Student Union Entrance".to_string(),
             description: "New to campus? Join us for a comprehensive tour where we show you all the essential spots!".to_string(),
@@ -44,7 +44,7 @@ async fn handler(_req: Request) -> Result<Response<Body>, Error> {
         Event {
             title: "Visa Renewal Workshop".to_string(),
             category: "Admin Support".to_string(),
-            date: "September 12, 2024".to_string(),
+            date: "June 28, 2025".to_string(),
             time: "5:00 PM - 6:30 PM".to_string(),
             location: "Room 301, Admin Building".to_string(),
             description: "Get expert guidance on the visa renewal process. We will cover all the required documents and answer questions.".to_string(),
@@ -53,7 +53,7 @@ async fn handler(_req: Request) -> Result<Response<Body>, Error> {
         Event {
             title: "International Food Festival".to_string(),
             category: "Cultural".to_string(),
-            date: "September 20, 2024".to_string(),
+            date: "July 12, 2025".to_string(),
             time: "6:00 PM onwards".to_string(),
             location: "Main University Lawn".to_string(),
             description: "Share a dish from your home country and taste flavors from around the world!".to_string(),
