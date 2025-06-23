@@ -19,6 +19,18 @@ async fn main() -> Result<(), Error> {
 }
 
 async fn handler(_req: Request) -> Result<Response<Body>, Error> {
+
+    // Handle OPTIONS preflight request
+    if req.method() == "OPTIONS" {
+        return Ok(Response::builder()
+            .status(204)
+            .header("Access-Control-Allow-Origin", "*") // or restrict to your frontend origin
+            .header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+            .header("Access-Control-Allow-Headers", "*")
+            .body(Body::Empty)?);
+    }
+
+
     let events = vec![
         Event {
             title: "Welcome Week Campus Tour".to_string(),
@@ -51,6 +63,7 @@ async fn handler(_req: Request) -> Result<Response<Body>, Error> {
 
     let json = serde_json::to_string(&events)?;
     Ok(Response::builder()
+        .header("Access-Control-Allow-Origin", "*") // or your frontend domain for better security
         .header("Content-Type", "application/json")
         .body(Body::Text(json))?)
 }
